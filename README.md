@@ -4,7 +4,9 @@ Updates:
  * Now automatically runs the setRoot (ignoring error)
 
 Wrapper:
-```
+to run checkm as a command (requires passwordless sudo):
+
+```perl
 #!/usr/bin/env perl
 
 use File::Basename;
