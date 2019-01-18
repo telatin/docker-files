@@ -39,3 +39,4 @@ RUN cd / && mkdir checkm-data && cd checkm-data && \
     wget https://data.ace.uq.edu.au/public/CheckM_databases/checkm_data_2015_01_16.tar.gz && \
     tar -xvzf checkm_data_2015_01_16.tar.gz
 
+RUN echo /checkm-data/ | checkm data setRoot; exit 0
