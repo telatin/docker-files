@@ -2,12 +2,14 @@
 
 ## CheckM
 
- * Assessing the quality of genomes: [website](http://sun.aei.polsl.pl/REFRESH/index.php?page=projects&project=dsrc&subpage=download)
+![CheckM](https://img.shields.io/docker/pulls/andreatelatin/checkm.svg)
 
-[![CheckM](https://img.shields.io/docker/pulls/andreatelatin/checkm.svg)]
+ * Assessing the quality of genomes: [website](http://sun.aei.polsl.pl/REFRESH/index.php?page=projects&project=dsrc&subpage=download)
+ * [Docker Hub](https://hub.docker.com/r/andreatelatin/checkm)
 
 ## dsrc2 
 
- * A fastq file compressor: [website](http://sun.aei.polsl.pl/REFRESH/index.php?page=projects&project=dsrc&subpage=download)
+![dsrc2](https://img.shields.io/docker/pulls/andreatelatin/dsrc2.svg)
 
-[![dsrc2](https://img.shields.io/docker/pulls/andreatelatin/dsrc2.svg)]
+ * A fastq file compressor: [website](http://sun.aei.polsl.pl/REFRESH/index.php?page=projects&project=dsrc&subpage=download)
+ * [Docker Hub](https://hub.docker.com/r/andreatelatin/dsrc2)
