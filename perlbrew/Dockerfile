@@ -11,7 +11,6 @@ RUN bash -c '\wget -O - http://install.perlbrew.pl | bash' &&\
 		/perl5/bin/perlbrew install-cpanm &&\
 		/perl5/bin/perlbrew switch perl-5.20.1
 
-		
 ENV PERLBREW_ROOT=/perl5 \
 	PATH=/perl5/bin:/perl5/perls/perl-5.20.1/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin \
 	PERLBREW_PERL=perl-5.20.1 \
@@ -22,6 +21,13 @@ ENV PERLBREW_ROOT=/perl5 \
 
 
 RUN /perl5/bin/cpanm -q DateTime JSON Getopt::Long::Descriptive Test::Most WWW::Mechanize LWP::Simple Module::Starter Perl::Tidy Config::Any
-RUN /perl5/bin/cpanm -q cpanm Bio::Perl Bio::Trace::ABIF
 RUN /perl5/bin/cpanm -q Moo App::Cmd
+RUN /perl5/bin/cpanm -q Bio::Trace::ABIF
+RUN /perl5/bin/cpanm -q Bio::Perl 
+RUN /perl5/bin/cpanm -q Perl::Critic
+RUN /perl5/bin/cpanm -q Dist::Zilla
+# Install bioperl
+#FROM bioperl/bioperl-builddeps as builder
+#COPY --from=builder /bioperl/bioperl-build /usr/local/src/bioperl-build/
+#RUN /perl5/bin/cpanm -v /usr/local/src/bioperl-build
 
