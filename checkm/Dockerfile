@@ -1,4 +1,4 @@
-FROM ubuntu:16.04
+FROM ubuntu:18.04
 LABEL last.tested="2018.01"
 LABEL original.source="sstevens/checkm"
 
@@ -10,7 +10,11 @@ RUN apt-get update && apt-get install -y \
         wget \ 
         build-essential \
         python \
-        python-pip
+        python-pip \
+	cython \
+	zlib1g-dev \
+	libbz2-dev \
+	liblzma-dev
 
 
 # prodigal
