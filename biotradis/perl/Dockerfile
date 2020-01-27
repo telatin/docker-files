@@ -25,8 +25,8 @@ RUN true \
 
 RUN apt update && apt install -y git wget zlib1g-dev build-essential \
  libncurses5-dev libncursesw5-dev sudo nano
-RUN cpanm --quiet --notest Dist::Zilla::App::Command::cover && \
-  cpanm --quiet --notest --skip-satisfied Devel::Cover::Report::Codecov 
+#RUN cpanm --quiet --notest Dist::Zilla::App::Command::cover && \
+#  cpanm --quiet --notest --skip-satisfied Devel::Cover::Report::Codecov
 WORKDIR /root
 
 RUN  git clone https://github.com/telatin/Bio-Tradis.git && \
@@ -34,5 +34,5 @@ RUN  git clone https://github.com/telatin/Bio-Tradis.git && \
 
 WORKDIR /root/Bio-Tradis
 
-RUN bash install_dependencies.sh
+#RUN bash install_dependencies.sh
 RUN cat  source_path >> /root/.bashrc
